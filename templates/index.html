@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penny Bot | Premium AI Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/animations.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Side Navigation -->
+        <nav class="side-nav">
+            <div class="nav-header">
+                <button class="new-chat-btn">
+                    <i class="fas fa-plus"></i>
+                    <span>New chat</span>
+                </button>
+                <button class="collapse-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+            
+            <div class="chat-history">
+                <div class="history-item active">
+                    <i class="fas fa-message"></i>
+                    <span>Current Conversation</span>
+                </div>
+                <!-- More history items would go here -->
+            </div>
+            
+            <div class="user-profile">
+                <div class="avatar">PB</div>
+                <div class="user-info">
+                    <span class="username">Penny Bot</span>
+                    <span class="user-status">Online</span>
+                </div>
+                <button class="settings-btn">
+                    <i class="fas fa-ellipsis"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="chat-container" id="chat-container">
+                <!-- Welcome Screen -->
+                <div class="welcome-screen">
+                    <div class="welcome-content">
+                        <div class="logo-mark">
+                            <div class="logo-icon">PB</div>
+                            <h1>Penny Bot</h1>
+                        </div>
+                        <h2>How can I help you today?</h2>
+                        
+                        <div class="suggestion-grid">
+                            <div class="suggestion-card">
+                                <i class="fas fa-lightbulb"></i>
+                                <h3>Explain quantum physics</h3>
+                                <p>In simple terms anyone can understand</p>
+                            </div>
+                            <div class="suggestion-card">
+                                <i class="fas fa-calendar-day"></i>
+                                <h3>What's the date today?</h3>
+                                <p>Get current date and calendar information</p>
+                            </div>
+                            <div class="suggestion-card">
+                                <i class="fas fa-clock"></i>
+                                <h3>Current time</h3>
+                                <p>Check the time in different timezones</p>
+                            </div>
+                            <div class="suggestion-card">
+                                <i class="fas fa-face-laugh-squint"></i>
+                                <h3>Tell me a joke</h3>
+                                <p>Sheldon-style science humor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Input Area -->
+            <div class="input-container">
+                <div class="input-box">
+                    <textarea id="user-input" placeholder="Message Penny Bot..." rows="1"></textarea>
+                    <button id="send-button" class="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <p class="disclaimer">Penny Bot may produce inaccurate information. Consider verifying important details.</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="background-gradient"></div>
+    <div id="particles-js"></div>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="/static/js/particles.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
