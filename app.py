@@ -48,11 +48,14 @@ def home():
 
 @app.route("/ask", methods=["POST"])
 def ask():
-    user_input = request.form["user_input"]
-    # Simulate natural response time
-    sleep(random.uniform(0.5, 1.2))
-    response = penny_bot(user_input)
-    return jsonify({"response": response})
-
+    try:
+        user_input = request.form.get("user_input", "").strip()
+        if not user_input:
+            return jsonify({"response": "Please enter a message."})
+        response=penny_bot(user_input)
+        return jsonify({"response": response})
+    except Exception as e:
+        app.logger.error(f"Error in ask endpoint: {str(e)}")
+        return jsonify({"response": "Sorry, something went wrong."}), 500
 if __name__ == "__main__":
     app.run(debug=True)
